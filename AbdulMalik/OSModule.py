@@ -1,0 +1,13 @@
+import os
+print("Your current working directory!")
+print(os.getcwd())
+# os.mkdir("Practice")
+os.chdir("Practice")
+print("Your current working directory!")
+print(os.getcwd())
+# os.mkdir("Munshi Ji")
+# os.mkdir("Nakhoda Mohammalla")
+print(os.listdir())
+os.rmdir("Munshi Ji")
+os.rmdir("Nakhoda Mohammalla")
+print(os.listdir())
