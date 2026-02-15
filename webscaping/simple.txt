@@ -1,0 +1,27 @@
+print(r)
+soup=BeautifulSoup(r.text)
+# print(soup.prettify())
+
+teams=soup.find_all("div",class_="ssrcss-ivmted-MobileWidthOnly e1sk6csp1")
+# print(teams,type(teams))
+all_teams=[]
+for t in teams:
+    all_teams.append(t.text)
+
+all_played=[]
+played=soup.find_all("div",class_="ssrcss-1vo7v3r-CellWrapper ef9ipf0")
+
+for p in played:
+    all_played.append(p.text)
+
+t1=(list(map(float,all_played[:12])))[::2]
+print(t1)
+
+t2=(list(map(float,all_played[12:24])))[::2]
+print(t2)
+
+
+
+
+
+# print(all_played,len(all_played))
